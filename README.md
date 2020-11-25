@@ -2,6 +2,8 @@
 
 This repo is an example of how to deploy a Standalone Manager/Gateway running R81 in AWS.
 
+Terraform V.13.5 was used for this demo.
+
 This example will create a new VPC, 3 subnets (External, Internal, DMZ) and setup the route 
 tables for the subnets.  The DMZ subnet will send all traffic to the Internal interface of the 
 Mgmt/Gateway.  NAT will need to be setup to allow traffic outbound or inbound.
