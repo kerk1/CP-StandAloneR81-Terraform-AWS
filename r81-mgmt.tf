@@ -42,3 +42,9 @@ resource "aws_eip" "CHKP_Management_EIP" {
   network_interface = aws_network_interface.mgmt_nic1.id
   vpc      = true
 } 
+
+#Output pulic ip address of the instance
+output "standalone_ipaddress" {
+  value       = aws_eip.CHKP_Management_EIP.public_ip
+  description = "The public IP address of the standalone server instance."
+}
